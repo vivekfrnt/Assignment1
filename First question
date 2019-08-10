@@ -1,0 +1,2 @@
+this: It refers to this owner object and  global object.
+Let : Javascript have Global Scope and Function Scope. But can acheive only using Let in Block Scope
