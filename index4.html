@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse String</title>
+	<style>
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+	</style>	
+</head>
+<body>
+<div id="app"></div>
+<script>
+var values2 = ["arr1","arr1","arr2","arr3"]; 
+var ans = values2.filter((value, index) => values2.indexOf(value) === index);
+document.querySelector("#app").innerHTML = JSON.stringify(ans);
+</script>	
+</body>
+</html>

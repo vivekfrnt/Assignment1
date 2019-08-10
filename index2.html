@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting key values</title>
+	<style>
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+	</style>	
+</head>
+<body>
+<div id="app"></div>
+<script>
+ let obj = {  a: 5, b: { c: { d: 10 } }}, ans = getObjectKeys(obj);
+ 
+ 
+ function getObjectKeys(obj) {
+  let temp = Object.keys(obj), ans = [...temp];
+  temp.forEach(function(key) {
+    if( Object.prototype.toString.call(obj[key]) === "[object Object]") {
+      ans = ans.concat(getObjectKeys(obj[key]));
+    }
+
+  });
+  return ans;
+ }
+ 
+ document.querySelector('#app').innerHTML = JSON.stringify(ans);
+</script>	
+</body>
+</html>
